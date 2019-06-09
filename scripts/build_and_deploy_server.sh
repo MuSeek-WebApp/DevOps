@@ -9,6 +9,7 @@ npm run --prefix $DEV_PATH/server build
 
 rm -r $PROD_PATH/dist/*
 cp -r $DEV_PATH/server/dist/* $PROD_PATH/dist
+cp -r $PROD_PATH/config $PROD_PATH/dist
 cp -r $DEV_PATH/server/node_modules $PROD_PATH
 cp $DEV_PATH/server/.env $PROD_PATH
 
