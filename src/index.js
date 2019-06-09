@@ -6,8 +6,8 @@ import path from 'path';
 const app = express();
 const port = 6379
 const exec = childProcess.exec;
-app.use(bodyParser.json());
 
+app.use(bodyParser.json());
 app.all('/', (req, res) => {
   try {
     const { ref, repository, pusher } = req.body;
