@@ -16,6 +16,7 @@ app.all('/', (req, res) => {
       logger.info(`${pusher.name} pushed to master on ${repository.name} repository`)
       logger.info("Stoping museek service")
       exec('service museek stop');
+      exec('service maintenance start');
       if (repository.name === 'server') {
         logger.info("Start build and deploy server...")
         exec(`sh ${path.join(__dirname, '../scripts/build_and_deploy_server.sh')}`)
@@ -25,6 +26,7 @@ app.all('/', (req, res) => {
         exec(`sh ${path.join(__dirname, '../scripts/build_and_deploy_client.sh')}`)
       }
       logger.info("Starting museek service")
+      exec('service maintenance stop');
       exec('service museek start')
       logger.info("Everything is done!")
     }
