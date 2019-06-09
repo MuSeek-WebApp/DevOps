@@ -11,15 +11,20 @@ app.use(bodyParser.json());
 
 app.all('/', (req, res) => {
   try {
-    const { ref, repository } = req.body;
+    const { ref, repository, pusher } = req.body;
     if (ref === 'refs/heads/master') {
+      console.log(`${pusher.name} pushed to master on ${repository.name} repository`)
+      console.log("Stoping museek service")
       exec('service museek stop');
       if (repository.name === 'server') {
+        console.log("Start build and deploy server...")
         exec(`sh ${path.join(__dirname, '../scripts/build_and_deploy_server.sh')}`)
       }
       if (repository.name === 'client') {
+        console.log("Start build and deploy client...")
         exec(`sh ${path.join(__dirname, '../scripts/build_and_deploy_client.sh')}`)
       }
+      console.log("Done!")
       exec('service museek start')
     }
   } catch (error) {
