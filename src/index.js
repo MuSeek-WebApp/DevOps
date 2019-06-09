@@ -24,6 +24,8 @@ app.all('/', (req, res) => {
     }
   } catch (error) {
     console.log(error)
+  } finally {
+    res.sendStatus(200);
   }
 
 });
