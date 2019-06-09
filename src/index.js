@@ -5,7 +5,7 @@ import path from 'path';
 
 const app = express();
 const port = 6379
-const exec = childProcess.exec;
+const exec = childProcess.execSync;
 
 app.use(bodyParser.json());
 app.all('/', (req, res) => {
