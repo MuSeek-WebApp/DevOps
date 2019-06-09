@@ -24,6 +24,7 @@ app.all('/', (req, res) => {
         exec(`sh ${path.join(__dirname, '../scripts/build_and_deploy_client.sh')}`)
       }
       console.log("Done!")
+      console.log("Starting museek service")
       exec('service museek start')
     }
   } catch (error) {
