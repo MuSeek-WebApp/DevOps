@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 const app = express();
-const port = 6379;
+const port = 6379
 
 app.use(bodyParser.json());
 
