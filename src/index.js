@@ -6,7 +6,7 @@ const port = 6379;
 
 app.use(bodyParser.json());
 
-app.get('/',(req,res)=> {
+app.all('/',(req,res)=> {
   console.log(req.body);
   res.sendStatus(200);
 });
