@@ -24,7 +24,7 @@ app.all('/', (req, res) => {
         logger.info("Start build and deploy client...")
         exec(`sh ${path.join(__dirname, '../scripts/build_and_deploy_client.sh')}`)
       }
-      logger.infog("Starting museek service")
+      logger.info("Starting museek service")
       exec('service museek start')
       logger.info("Everything is done!")
     }
