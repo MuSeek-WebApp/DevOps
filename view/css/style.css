@@ -1,0 +1,86 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.website-title-box {
+  text-align: center; }
+  .website-title-box--main {
+    display: block;
+    font-weight: 400;
+    font-size: 70px;
+    color: #e7ece4;
+    letter-spacing: 20px; }
+  .website-title-box--sub {
+    display: block;
+    font-weight: 350;
+    font-size: 38px;
+    color: #e7ece4;
+    letter-spacing: 10px; }
+
+.btn {
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 500; }
+  .btn--header {
+    margin-top: 2rem;
+    background-color: #e7ece4;
+    height: 7.5rem;
+    padding: 20px 20px 20px 20px; }
+    .btn--header:hover {
+      box-shadow: 10px 10px 15px #777; }
+    .btn--header:active {
+      transform: translateY(1px);
+      box-shadow: 10px 10px 6px #777; }
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+.header {
+  background-image: linear-gradient(#f59bed, #a82ca88e), url("../img/pink4.jpg");
+  background-size: cover;
+  height: 95vh;
+  background-position: top;
+  position: relative; }
+
+.logo-frame {
+  position: absolute;
+  top: 50px;
+  left: 50px; }
+
+.logo {
+  height: 16rem;
+  filter: drop-shadow(0px 0px 20px #ece6e6); }
+
+.website-title-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
