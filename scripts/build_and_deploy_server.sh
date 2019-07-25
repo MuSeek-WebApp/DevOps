@@ -12,5 +12,6 @@ cp -r $DEV_PATH/server/dist/* $PROD_PATH/dist
 cp -r $DEV_PATH/server/scripts $PROD_PATH
 cp -r $PROD_PATH/config $PROD_PATH/dist
 cp -r $DEV_PATH/server/node_modules $PROD_PATH
+cp $DEV_PATH/server/src/mail/template.html $PROD_PATH/dist/mail/template.html
 cp $DEV_PATH/server/.env $PROD_PATH
 
